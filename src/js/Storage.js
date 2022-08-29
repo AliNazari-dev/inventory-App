@@ -11,7 +11,7 @@ export default class Storage {
     const savedCategories = Storage.getAllCategories();
     // edit => ... save
     // new => ... save
-    const existedItem = savedCategories.find((c) => c.id === categoryToSave.id);
+    const existedItem = savedCategories.find((c) =>c.title === categoryToSave.title);
     if (existedItem) {
       // edit
       existedItem.title = categoryToSave.title;
